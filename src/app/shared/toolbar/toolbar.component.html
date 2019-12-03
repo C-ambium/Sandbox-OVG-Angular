@@ -1,0 +1,15 @@
+<mat-toolbar class="fixed-top" color="primary">
+  <mat-toolbar-row>
+    <a [routerLink]="['event']"><img class="brand-logo" src="../../../assets/logo.png" alt="OVG"/></a>
+    <span class="spacer"></span>
+    <a class="icon"><mat-icon class="toolbar-icon" aria-hidden="false" aria-label="notifications">notifications</mat-icon></a>
+    <a class="icon"><mat-icon class="toolbar-icon" aria-hidden="false" aria-label="messages">mail</mat-icon></a>
+    <a class="icon" [matMenuTriggerFor]="menu"><mat-icon class="toolbar-icon" aria-hidden="false" aria-label="messages">person</mat-icon></a>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Profil</button>
+      <button mat-menu-item>Amis</button>
+      <button mat-menu-item>Mon compte</button>
+      <button mat-menu-item>Déconnexion</button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
