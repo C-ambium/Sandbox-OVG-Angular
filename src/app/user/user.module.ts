@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UserFormModule } from './user-form/user-form.module';
 import { UserListModule } from './user-list/user-list.module';
-import { UserListComponent } from './user-list/user-list.component';
+import { UserFormRegisterModule } from './user-form-register/user-form-register.module';
 
 @NgModule({
-  declarations: [
-    UserListComponent
-  ],
+  declarations: [ ],
   imports: [
     CommonModule,
-    UserFormModule,
+    UserFormRegisterModule,
     UserListModule
-  ],
+    ],
   exports: [
-    UserListComponent
+    UserListModule,
+    UserFormRegisterModule
   ]
 })
   

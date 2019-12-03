@@ -10,7 +10,7 @@
 @include mat-core();
 $ovg: (
   50: #ffffff,
-  100: #ffcdd2,
+  100: #ffb702,
   200: #ef9a9a,
   300: #e57373,
   400: #ef5350,
@@ -42,7 +42,7 @@ $ovg: (
 );
 
 // Define the default theme (same as the example above).
-$ovg-primary: mat-palette($ovg, 50); // white
+$ovg-primary: mat-palette($ovg, 100); // orange
 $ovg-accent:  mat-palette($ovg, A400);
 $ovg-theme:   mat-light-theme($ovg-primary, $ovg-accent);
 

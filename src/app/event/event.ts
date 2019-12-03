@@ -7,6 +7,9 @@ export interface Event {
 }
 
 export interface EventFormDTO {
-label: string;
-finished: boolean;
+  id: number;
+  label: string;
+  author: string;
+  description: string;
+  enabled: boolean;
 }

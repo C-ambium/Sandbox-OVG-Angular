@@ -4,6 +4,7 @@ export interface User {
     email: string;
     password: string;
     birthdate: Date;
+    age: number;
     registeredAt: Date;
     enabled: boolean;
   }
