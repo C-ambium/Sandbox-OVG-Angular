@@ -15,6 +15,6 @@ import { EventListInlineComponent } from './event-list-inline/event-list-inline.
     MatButtonToggleModule,
     MatIconModule
   ],
-  exports: [EventListCardComponent,EventListToggleComponent, EventListInlineComponent]
+  exports: [EventListCardComponent, EventListToggleComponent, EventListInlineComponent]
 })
 export class EventListModule { }

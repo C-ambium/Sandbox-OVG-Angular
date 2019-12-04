@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { EventListInlineComponent } from './event-list-inline.component';
+import { MatCardModule } from '@angular/material';
 
 describe('EventListInlineComponent', () => {
   let component: EventListInlineComponent;
@@ -8,7 +8,12 @@ describe('EventListInlineComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EventListInlineComponent ]
+      declarations: [
+        EventListInlineComponent
+      ],
+      imports: [
+        MatCardModule
+      ]
     })
     .compileComponents();
   }));

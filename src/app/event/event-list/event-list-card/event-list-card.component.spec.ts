@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { EventListCardComponent } from './event-list-card.component';
+import { MatCardModule } from '@angular/material';
 
 describe('EventListCardComponent', () => {
   let component: EventListCardComponent;
@@ -8,7 +8,12 @@ describe('EventListCardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EventListCardComponent ]
+      declarations: [
+        EventListCardComponent
+       ],
+       imports: [
+         MatCardModule
+       ]
     })
     .compileComponents();
   }));

@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PaginatorComponent } from './paginator.component';
+import { MatFormFieldModule, MatInputModule, MatPaginatorModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('PaginatorComponent', () => {
   let component: PaginatorComponent;
@@ -8,7 +11,16 @@ describe('PaginatorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PaginatorComponent ]
+      declarations: [
+        PaginatorComponent
+      ],
+      imports: [
+        FormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatPaginatorModule,
+        BrowserAnimationsModule
+      ]
     })
     .compileComponents();
   }));
