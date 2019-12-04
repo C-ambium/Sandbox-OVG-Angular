@@ -9,11 +9,11 @@ import { UserApiService } from '../user-api.service';
 })
 export class UserFormRegisterComponent implements OnInit {
 
-  registerForm = this.fb.group({ 
+  registerForm = this.fb.group({
     username: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
     email: ['', [Validators.required, Validators.email]],
     password: ['', Validators.required],
-    confimpassword: ['', Validators.required],
+    // confimpassword: ['', Validators.required],
     birthdate: ['', Validators.required]});
 
   constructor(private readonly fb: FormBuilder, private readonly userApi: UserApiService) { }
@@ -25,20 +25,20 @@ export class UserFormRegisterComponent implements OnInit {
     this.userApi.add(this.registerForm.value).subscribe;
   }
 
-  get username(): AbstractControl { 
-    return this.registerForm.get('username'); 
+  get username(): AbstractControl {
+    return this.registerForm.get('username');
   }
 
-  get email(): AbstractControl { 
-    return this.registerForm.get('email'); 
-  } 
+  get email(): AbstractControl {
+    return this.registerForm.get('email');
+  }
 
-  get password(): AbstractControl { 
-    return this.registerForm.get('password'); 
-  } 
+  get password(): AbstractControl {
+    return this.registerForm.get('password');
+  }
 
-  get birthdate(): AbstractControl { 
-    return this.registerForm.get('birthdate'); 
-  } 
+  get birthdate(): AbstractControl {
+    return this.registerForm.get('birthdate');
+  }
 
 }

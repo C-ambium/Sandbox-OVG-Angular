@@ -11,7 +11,7 @@ const URL = `${environment.apiUrl}/event`;
 export class EventApiService {
 
   constructor(private http: HttpClient) { }
-  
+
   getAll() {
   //  return this.http.get<Event[]>('./assets/fixtureEvent.json');
     return this.http.get<Event[]>(`${URL}`);

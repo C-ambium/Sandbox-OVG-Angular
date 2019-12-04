@@ -50,16 +50,16 @@ export class UserListComponent implements OnInit {
     return age;
   }
 
-  get total() {
-    return (this.users || []).length;
-  }
-  
-  applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+  // get total() {
+  //   return (this.users || []).length;
+  // }
 
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
-  }
+  // applyFilter(filterValue: string) {
+  //   this.dataSource.filter = filterValue.trim().toLowerCase();
+
+  //   if (this.dataSource.paginator) {
+  //     this.dataSource.paginator.firstPage();
+  //   }
+  // }
 }
 
