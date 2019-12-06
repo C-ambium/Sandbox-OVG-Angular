@@ -1,9 +1,9 @@
-// import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 import { Component, Input, OnInit, ViewChild, OnDestroy } from '@angular/core';
 import { User } from '../user';
 import { UserApiService } from '../user-api.service';
 import { Subscription } from 'rxjs';
 import { delay } from 'rxjs/operators';
+import { MatTableDataSource, MatPaginator } from '@angular/material';
 
 @Component({
   selector: 'app-user-list',
@@ -15,13 +15,23 @@ export class UserListComponent implements OnInit, OnDestroy {
   constructor(private api: UserApiService) { }
 
   users: User[] = null;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  displayedColumns: string[] = ['id', 'username', 'email', 'birthdate', 'age', 'registeredAt', 'actions'];
+
+  dataSource: MatTableDataSource<User>;
 
   private sub: Subscription;
 
   ngOnInit() {
     this.api.getAll()
       .pipe(delay(1_000))
-      .subscribe(data => this.users = data);
+      .subscribe(data => this.receive(data));
+  }
+  receive(data: User[]): void {
+    this.users = data;
+    this.dataSource = new MatTableDataSource(this.users);
+    this.dataSource.paginator = this.paginator;
   }
 
   get total() {
