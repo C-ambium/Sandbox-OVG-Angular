@@ -14,7 +14,7 @@ export class UserListComponent implements OnInit, OnDestroy {
 
   constructor(private api: UserApiService) { }
 
-  private users: User[] = null;
+  users: User[] = null;
 
   private sub: Subscription;
 

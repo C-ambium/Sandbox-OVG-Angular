@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatTableModule, MatFormFieldModule, MatPaginatorModule, MatSortModule } from '@angular/material';
-import { FormsModule } from '@angular/forms';
 import { UserListComponent } from './user-list.component';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { OvgFormsModule } from 'src/app/shared/forms/ovg-forms.module';
+import { OvgTablesModule } from 'src/app/shared/tables/ovg-tables.module';
 
 @NgModule({
   declarations: [
@@ -11,12 +10,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   ],
   imports: [
     CommonModule,
-    SharedModule,
-    MatTableModule,
-    MatFormFieldModule,
-    MatPaginatorModule,
-    MatSortModule,
-    FormsModule
+    OvgTablesModule,
+    OvgFormsModule
   ],
   exports: [
     UserListComponent

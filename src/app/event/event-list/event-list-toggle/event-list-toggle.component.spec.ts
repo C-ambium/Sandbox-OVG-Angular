@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { EventListToggleComponent } from './event-list-toggle.component';
 import { MatIconModule, MatButtonToggleModule } from '@angular/material';
+import { MaterialModule } from 'src/app/shared/material/material.module';
 
 describe('EventListToggleComponent', () => {
   let component: EventListToggleComponent;
@@ -12,8 +13,7 @@ describe('EventListToggleComponent', () => {
         EventListToggleComponent
       ],
       imports: [
-        MatButtonToggleModule,
-        MatIconModule
+        MaterialModule
       ]
     })
     .compileComponents();

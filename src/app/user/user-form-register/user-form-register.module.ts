@@ -1,18 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserFormRegisterComponent } from './user-form-register.component';
+import { MaterialModule } from 'src/app/shared/material/material.module';
+import { OvgFormsModule } from 'src/app/shared/forms/ovg-forms.module';
 
 @NgModule({
   declarations: [ UserFormRegisterComponent ],
   imports: [
     CommonModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatInputModule,
-    ReactiveFormsModule,
-    FormsModule
+    MaterialModule,
+    OvgFormsModule
   ],
   exports: [ UserFormRegisterComponent ]
 })

@@ -4,22 +4,23 @@ import { LoaderComponent } from './loader/loader.component';
 import { ToolbarModule } from './toolbar/toolbar.module';
 import { PipesModule } from './pipes/pipes.module';
 import { MaterialModule } from './material/material.module';
+import { LoaderModule } from './loader/loader.module';
 
 @NgModule({
-  declarations: [
-    LoaderComponent,
-  ],
+  declarations: [],
   imports: [
-    ToolbarModule,
     CommonModule,
+    ToolbarModule,
     MaterialModule,
-    PipesModule
+    PipesModule,
+    LoaderModule
   ],
   exports : [
     LoaderComponent,
     ToolbarModule,
     MaterialModule,
-    PipesModule
+    PipesModule,
+    LoaderModule
   ]
 })
 export class SharedModule { }

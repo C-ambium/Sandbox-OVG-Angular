@@ -15,7 +15,8 @@ export class EventListComponent implements OnInit {
 
   constructor(private api: EventApiService) {}
 
-  private events: Event[] = null;
+  events: Event[] = null;
+
   ngOnInit() {
     this.api.getAll()
       .subscribe(data => this.events = data);

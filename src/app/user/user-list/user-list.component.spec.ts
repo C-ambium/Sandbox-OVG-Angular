@@ -1,7 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { UserListComponent } from './user-list.component';
-import { HttpClientModule } from '@angular/common/http';
+import { OvgTablesModule } from 'src/app/shared/tables/ovg-tables.module';
+import { OvgFormsModule } from 'src/app/shared/forms/ovg-forms.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 describe('UserListComponent', () => {
   let component: UserListComponent;
@@ -9,11 +10,11 @@ describe('UserListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        UserListComponent
-      ],
+      declarations: [UserListComponent],
       imports: [
-        HttpClientModule
+        SharedModule,
+        OvgTablesModule,
+        OvgFormsModule
       ]
     })
     .compileComponents();
