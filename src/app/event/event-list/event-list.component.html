@@ -1,8 +1,8 @@
 <app-event-list-toggle class="toggle-btn" (change)="onDrawModeChange($event)"></app-event-list-toggle>
 <div [ngSwitch]="drawMode">
   <div class="event-list" *ngSwitchCase="'list'">
-      <ng-container *ngFor="let e of events">
-        <app-event-list-inline [label]="e.label" [description]="e.description" [author]="e.author"></app-event-list-inline>
+      <ng-container>
+        <app-event-list-inline [events]="events" ></app-event-list-inline>
       </ng-container>
   </div>
   <div class="event-cards" *ngSwitchCase="'cards'">

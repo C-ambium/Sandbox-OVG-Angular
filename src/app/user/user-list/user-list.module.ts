@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatTableModule, MatFormFieldModule, MatPaginatorModule, MatFormField, MatButtonModule, MatInputModule, MatRippleModule, MatSortBase, MatSortModule } from '@angular/material';
+import { MatTableModule, MatFormFieldModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { UserListComponent } from './user-list.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { UserListComponent } from './user-list.component';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     MatTableModule,
     MatFormFieldModule,
     MatPaginatorModule,

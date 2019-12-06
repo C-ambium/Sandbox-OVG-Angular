@@ -1,8 +1,8 @@
+// import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+// import { RouterTestingModule } from '@angular/router/testing';
 import { TestBed, fakeAsync, tick } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { EventApiService } from './event-api.service';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { of } from 'rxjs';
 
 const fakeEvents = [{

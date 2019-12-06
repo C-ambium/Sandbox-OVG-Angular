@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EventListComponent } from './event-list.component';
-import { MatCardModule, MatButtonModule, MatButtonToggleModule, MatIconModule } from '@angular/material';
+import { MatCardModule, MatButtonToggleModule, MatIconModule } from '@angular/material';
 import { EventListToggleComponent } from './event-list-toggle/event-list-toggle.component';
 import { EventListInlineComponent } from './event-list-inline/event-list-inline.component';
 import { EventListCardComponent } from './event-list-card/event-list-card.component';
@@ -22,7 +22,6 @@ describe('EventListComponent', () => {
       imports: [
         HttpClientModule,
         MatCardModule,
-        MatButtonModule,
         MatButtonToggleModule,
         MatIconModule
       ]

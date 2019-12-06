@@ -5,9 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserFormRegisterComponent } from './user-form-register.component';
 
 @NgModule({
-  declarations: [    
-    UserFormRegisterComponent
-  ],
+  declarations: [ UserFormRegisterComponent ],
   imports: [
     CommonModule,
     MatFormFieldModule,
@@ -16,8 +14,6 @@ import { UserFormRegisterComponent } from './user-form-register.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  exports: [
-    UserFormRegisterComponent
-  ]
+  exports: [ UserFormRegisterComponent ]
 })
 export class UserFormRegisterModule { }

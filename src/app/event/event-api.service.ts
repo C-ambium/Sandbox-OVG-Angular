@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Event, EventFormDTO } from './event';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 
 const URL = `${environment.apiUrl}/event`;
 
@@ -13,8 +13,8 @@ export class EventApiService {
   constructor(private http: HttpClient) { }
 
   getAll() {
-  //  return this.http.get<Event[]>('./assets/fixtureEvent.json');
-    return this.http.get<Event[]>(`${URL}`);
+    return this.http.get<Event[]>('./assets/fixtureEvent.json');
+  //  return this.http.get<Event[]>(`${URL}`);
   }
 
   getOne(id: number) {

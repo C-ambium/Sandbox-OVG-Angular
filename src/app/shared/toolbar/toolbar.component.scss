@@ -1,3 +1,9 @@
+.mat-toolbar {
+  background: #fff;
+}
+i {
+  color: rgba(0, 0, 0, 0.87);
+}
 .toolbar-icon {
   margin:auto;
   padding: 14px 14px;
@@ -29,12 +35,9 @@ a {
 .mat-icon {
   height: auto !important;
   width: auto !important;
+  color: #ff791c;
 }
 
-.mat-toolbar {
-  background: #fff;
+mat-menu {
+  border-top: solid #ff791c;
 }
-
-// button {
-//   text-align: center !important;
-// }

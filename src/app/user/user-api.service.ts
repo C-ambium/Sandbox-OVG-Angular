@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from './user';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 
 const URL = `${environment.apiUrl}/user`;
 
@@ -14,7 +14,7 @@ export class UserApiService {
 
   getAll() {
     return this.http.get<User[]>('./assets/fixtureUser.json');
-  //  return this.http.get<User[]>(('URL/event');
+  //  return this.http.get<User[]>((`${URL}`);
   }
 
   getOne(id: number) {

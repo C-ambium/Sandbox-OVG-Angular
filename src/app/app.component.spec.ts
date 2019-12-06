@@ -1,14 +1,10 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { ToolbarModule } from './shared/toolbar/toolbar.module';
-import { EventListModule } from './event/event-list/event-list.module';
-import { RouterTestingModule } from '@angular/router/testing';
-import { AppModule } from './app.module';
 import { EventModule } from './event/event.module';
 import { UserModule } from './user/user.module';
-import { MatCardModule, MatButtonModule, MatFormFieldModule } from '@angular/material';
 import { SharedModule } from './shared/shared.module';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -16,16 +12,11 @@ describe('AppComponent', () => {
       declarations: [
       ],
       imports: [
-        AppModule,
-        FormsModule,
-        ReactiveFormsModule,
-        ToolbarModule,
         EventModule,
-        EventListModule,
-        UserModule,
-        RouterTestingModule,
         SharedModule,
-        MatCardModule
+        UserModule,
+        FormsModule,
+        RouterModule
       ]
     }).compileComponents();
   }));

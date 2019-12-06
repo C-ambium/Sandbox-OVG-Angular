@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { EventListInlineComponent } from './event-list-inline.component';
-import { MatCardModule } from '@angular/material';
+import { MatCardModule, MatTableModule } from '@angular/material';
 
 describe('EventListInlineComponent', () => {
   let component: EventListInlineComponent;
@@ -12,7 +12,7 @@ describe('EventListInlineComponent', () => {
         EventListInlineComponent
       ],
       imports: [
-        MatCardModule
+        MatTableModule
       ]
     })
     .compileComponents();
