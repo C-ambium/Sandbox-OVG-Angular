@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, AbstractControl } from '@angular/forms';
-import { UserApiService } from '../user-api.service';
+import { UserApiService } from '../../user-api.service';
 
 @Component({
   selector: 'app-user-form-register',

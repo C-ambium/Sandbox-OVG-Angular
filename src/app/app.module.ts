@@ -7,8 +7,11 @@ import { UserModule } from './user/user.module';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ToolbarModule } from './shared/toolbar/toolbar.module';
-import localeFr from '@angular/common/locales/fr';
 import { registerLocaleData } from '@angular/common';
+import { AuthModule } from './auth/auth.module';
+
+import localeFr from '@angular/common/locales/fr';
+import { PagesModule } from './pages/pages.module';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -23,7 +26,9 @@ registerLocaleData(localeFr, 'fr');
     HttpClientModule,
     RouterModule,
     EventModule,
-    UserModule
+    UserModule,
+    AuthModule,
+    PagesModule
   ],
   providers: [
     // Set locate to FR for pipe date

@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolbarComponent implements OnInit {
 
+  displayForm: boolean;
+
   constructor() { }
 
   ngOnInit() {
+    this.displayForm = false;
+  }
+  displayConnect() {
+    this.displayForm = true;
   }
 
 }
