@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { User } from 'src/app/user/user';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-event-list-card',
@@ -9,10 +11,17 @@ export class EventListCardComponent implements OnInit {
   // @Input() event: Event;
   @Input() label: string;
   @Input() description: string;
-  @Input() author: string;
+  @Input() author: User;
+  @Input() id: number;
 
-  constructor() {}
+//  id : string;
 
-  ngOnInit() {}
+  constructor(
+ //   private readonly route: ActivatedRoute
+    ) {}
+
+  ngOnInit() {
+ //   this.id = this.route.snapshot.paramMap.get('id');
+  }
 
 }

@@ -1,17 +1,17 @@
 <mat-card class="event-card">
   <mat-card-header>
     <div mat-card-avatar class="event-header-image"></div>
-    <mat-card-title>{{label}}</mat-card-title>
-    <mat-card-subtitle>{{author}}</mat-card-subtitle>
+    <mat-card-title>{{ label }}</mat-card-title>
+    <mat-card-subtitle>{{ author.username }}</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
   <mat-card-content>
     <p>
-      {{description}}
+      {{ description }}
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button color="accent" mat-button>Détails</button>
+      <a [routerLink]="[ id ]"><button color="accent" mat-button>Détails</button></a>
     <span class="spacer"></span>
     <button color="accent" mat-button>Rejoindre</button>
   </mat-card-actions>

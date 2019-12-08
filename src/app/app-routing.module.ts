@@ -7,28 +7,35 @@ import { UserFormLoginComponent } from './user/user-form/user-form-login/user-fo
 import { UserFormRegisterComponent } from './user/user-form/user-form-register/user-form-register.component';
 import { LogguedGuard } from './auth/loggued.guard';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { EventDetailsComponent } from './event/event-details/event-details.component';
+import { UserFormEditComponent } from './user/user-form/user-form-edit/user-form-edit.component';
 
 const routes: Routes = [
 
   { path: '',     redirectTo: 'login', pathMatch: 'full' },
-  { path: 'event', component: EventListComponent },
-  { path: 'user', component: UserListComponent },
+  { path: 'event', component: EventListComponent, // Event List
+      children: [
+        { path : ':id', component: EventDetailsComponent } // event detail
+      ],
+  },
+  { path: 'user', component: UserListComponent }, // User List
+  { path: 'login', component: UserFormLoginComponent }, // Login
+  { path: 'register', component: UserFormRegisterComponent }, // Register
 
-  // USER routing path
+  // USER guard routing path
   { path: 'user',
       children: [
         { path: '',       component: UserListComponent, pathMatch: 'full' },
-        { path: 'register', component: UserFormRegisterComponent },
+        { path: ':id',    component: UserFormEditComponent } // user edit
   //    { path: ':id',    component: UserDetailsComponent } // user detail
         ],
         canActivate: [ LogguedGuard ]
   },
-  // EVENT routing path
+  // EVENT guard routing path
   { path: 'event',
     children: [
       { path : '', component: EventListComponent, pathMatch: 'full'},
-      { path: 'new', component: EventFormComponent }
-  //  { path : ':id', component: EventDetailComponent } // event detail
+      { path: 'new', component: EventFormComponent },
     ],
     canActivate: [ LogguedGuard ]
   },
@@ -39,7 +46,6 @@ const routes: Routes = [
   // { path: 'event/new', component: EventFormComponent },
   // { path: 'user', component: UserListComponent },
   // { path: 'register', component: UserFormRegisterComponent },
-  // { path: 'login', component: UserFormLoginComponent },
   // { path: '',     redirectTo: 'event', pathMatch: 'full' }
 
 @NgModule({
