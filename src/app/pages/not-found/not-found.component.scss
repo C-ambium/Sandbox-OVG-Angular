@@ -1,6 +1,16 @@
-.notfound {
+.notfound img {
   display: block;
-  margin-left: auto;
+  //align-content: center;
   margin-right: auto;
-  opacity: 70%;
+  margin-left: auto;
+  z-index: -1000;
+}
+
+body {
+  background-image: url('https://cdn.dribbble.com/users/1963449/screenshots/5915645/404_not_found_2x.png');
+}
+
+h1 {
+  z-index: 100;
+  text-align: center;
 }
